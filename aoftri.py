@@ -3,3 +3,6 @@ def aoft():
     height= int(input("Enter height if triangle: "))
     area= 0.5*(breadth*height)
     print(area)
+
+print("what should i print")
+aoft()
