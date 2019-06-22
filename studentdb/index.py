@@ -28,17 +28,23 @@ def searchStudentData(branch):
 
 ####### Update data in database ######
 def updateStudentData():
-    mycursor.execute("UPDATE student_info SET phone=000000000 WHERE id=2")
+    id = input("Enter id : ")
+    name = input("Enter Name : ")
+    branch = input("Enter Branch : ")
+    year = input("Enter year : ")
+    phone = input("Enter phone : ")
+    email = input("Enter Email : ")
+    upInput = (id,name, branch, year, phone, email)
+    mycursor.execute("UPDATE student_info SET name=%s, branch=%s, year=%s, phone=%s, email=%s WHERE id=%s",upInput)
     mydb.commit()
 
 ###### Delete row from database ######
 def deleteStudentData(id):
-    mycursor.execute("DELETE FROM student_info where id = %s",(id,))
+    mycursor.execute("DELETE FROM student_info where id = %s",(idDel,))
     mydb.commit()
-    print("Deleted successfully")
 
 
-i = input("Enter any of these Options 'i' or 'sh' or 'se' or 'de' : ")
+i = input("Enter any of these Options 'i' or 'sh' or 'se' or 'de' or 'up' : ")
 if(i=="i"):
     name = input("Enter Name : ")
     branch = input("Enter Branch : ")
@@ -46,16 +52,23 @@ if(i=="i"):
     phone = input("Enter phone : ")
     email = input("Enter Email : ")
     insertStudentData(name,branch,year,phone,email)
+    print("Inserted")
+    getAllStudentData()
 elif(i=="sh"):
     getAllStudentData()
 elif(i=="se"):
     branch = input("Enter Branch : ")
     searchStudentData(branch)
-# elif(i=="up"):
-#     update = 
-#     updateStudentData()
+elif(i=="up"):
+    updateStudentData()
+    print("Updated")
+    getAllStudentData()
 elif(i=="de"):
-    id = input("Enter id : ")
+    idDel = input("Enter id : ")
     deleteStudentData(id)
+    print("Deleted successfully")
+    print("Existing data")
+    getAllStudentData()
+
 else:
     print("Select something dude!")
