@@ -28,7 +28,7 @@ def account_creation():
 
 def account_search():
     search_account = input("Enter Name: ")
-    mycursor.execute("SELECT * FROM account WHERE name= '%s'", (search_account,))
+    mycursor.execute("SELECT * FROM account WHERE name= %s", (search_account,))
     search_result = mycursor.fetchall()
     for i in search_result:
         print(i)
@@ -37,4 +37,8 @@ def account_search():
         # else:
         #     print("No account found.")
 
-# account_search()
+def show_accounts():
+        mycursor.execute("SELECT * FROM account")
+        all_accounts = mycursor.fetchall()
+        for i in all_accounts:
+                print(i)
