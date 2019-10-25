@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'styles.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'signup.css' %}" type="text/css">
+    </head>
+    <body>
+        <div class="d-lable">
+            <p class="p1">Signup.</p>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#home">Personal details</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu1">Account details</a>
+                </li>
+              </ul>
+            
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                    <div class="per">
+                        <form class="fper">
+                            <ul class="u1">
+                                <li><input type="text" name="fname" placeholder="first name"></li>
+                                <li><input type="text" name="lname" placeholder="last name"></li>
+                                <li><input type="text" name="phno" placeholder="phone number"></li>
+                                <li><input type="email" name="mail" placeholder="email id"></li>
+                                <li><input type="date" name="dob" placeholder="dob"></li>
+                                <TEXTarea class="address" placeholder="enter your address here"></TEXTarea>
+                                <select name="bank" class="optb">
+                                    <option value="none">select bank</option>
+                                    <option value="sbi">sbi</option>
+                                    <option value="icici">icici</option>
+                                    <option value="axis">axis</option>
+                                    <option value="hdfc">hdfc</option>
+                                </select>
+                                <div class="sub">
+                                    <input class="subm" type="submit" name="submit">
+                                    <input class="re" type="reset" name="reset">
+                                </div>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                    <div class="amain">
+                        <div class="acons">
+                            <form class="facc">
+                                <ul class="u2">
+                                    <li>bank :<input type="text"></li>
+                                    <li>account no :<input type="text"></li>
+                                    <li>ifsc code :<input type="text" ></li>
+                                    <li>branch code :<input type="text"></li>
+                                    <li>branch :<input type="text"></li>
+                                    <div class="sub1">
+                                        <input class="subm1" type="submit" name="confirm">
+                                    </div>
+                                </ul>
+                            </form>
+                        </div>
+
+                    </div>
+                  
+                </div>
+              </div>
+        </div>
+    
+    </body>
+</html>

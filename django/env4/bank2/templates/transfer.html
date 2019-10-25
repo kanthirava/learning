@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body class="container">
+    <div style="text-align:center;">
+        <h1>Welcome User</h1> <br>
+    </div>
+        <ul class="nav nav-pills nav-fill" style="    background-color: lavender;
+        margin: 10px;
+        border-radius: 10px;">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/summary" style="font-weight: bold">Account summary</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/addben" style="font-weight: bold">Add Beneficiary</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#transactions" style="font-weight: bold">Fund Transfer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="/settings" tabindex="-1" aria-disabled="true" style="font-weight: bold">Settings</a>
+                </li>
+              </ul>
+    <div style="position: absolute;right: 10px;;top: 0px;">
+        <a href="/login" style="text-align: right"><h5>Logout</h5></a>
+        <p>Last login 21 Jul 11:40 AM</p>
+    </div>
+    
+    <h3>To</h3>
+    <select>
+        <option>Choose Beneficiary...</option>
+        <option value="kanthi">kanthi</option>
+        <option value="vinay">vinay</option>
+        <option value="nandan">nandan</option>
+        <option value="hari">hari</option>
+    </select>
+</body>
+</html>
